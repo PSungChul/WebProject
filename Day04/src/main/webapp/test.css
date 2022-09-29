@@ -1,0 +1,20 @@
+@charset "EUC-KR";
+/* 주석 */
+/* id > 인라인 > class > 태그 */
+/* id값을 쓸때는 앞에 #을 붙인다 */
+#bm {
+	font-size:50px;
+}
+/* class를 앞에 .을 붙인다 */
+.noncoffee {
+	text-decoration:underline;
+}
+
+li {
+	font-size:18px;
+}
+
+h4 {
+	color:red;
+	text-decoration:underline;
+}

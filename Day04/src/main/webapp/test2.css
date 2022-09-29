@@ -1,0 +1,12 @@
+@charset "EUC-KR";
+
+h2, h3 { /* group */
+	color:green;
+	text-align: center; /* div가 사용되면 div를 기준으로 정렬이 된다 */
+}
+
+div {
+	height: 150px;
+	width: 300px;
+	background-color: yellow;
+}
