@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<!-- 요소.value 와 요소.innerText의 차이 -->
+	<input id="tx_input" type="text">
+	<input type="button" value="setValue" onclick="setValue()">
+	<input type="button" value="setInnerText" onclick="setInnerText()">
+	<br>
+	<input type="button" value="getValue" onclick="getValue()">
+	<input type="button" value="getInnerText" onclick="getInnerText()">
+	
+	<script>
+		var tx_input = document.getElementById("tx_input");
+
+		function setValue() {
+			tx_input.value = "value! 들어가지롱";
+		}
+
+		function setInnerText() {
+			tx_input.innerText = "innerText! 들어가지롱";
+		}
+
+		function getValue() {
+			alert(tx_input.value);
+		}
+
+		function getInnerText() {
+			alert(tx_input.innerText);
+		}
+	</script>
+</body>
+</html>

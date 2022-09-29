@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<!-- HTML entity w3schools에 들어가면 다 나와있다.-->
+	<!-- &lt; - less than < -->
+	<!-- &gt; - greater than > -->
+	<h2>&lt;도서관 회원 가입&gt;</h2>
+	<label>이름 : </label>
+	<input id="tx_name" type="text">
+	<br>
+	<label>학번 : </label>
+	<input id="tx_sid" type="text">
+	<br>
+	<input type="button" value="가입" onclick="join()">
+	<div id="bottom"></div>
+
+	<script>
+		function join() {
+			var name = document.querySelector("#tx_name").value;
+			// document.getElementById("tx_name").value;
+			var sid = document.querySelector("#tx_sid").value;
+			// document.getElementById("tx_sid").value;
+			document.getElementById("bottom").innerText = name + "(학번 : " + sid + ")";
+		}
+	</script>
+</body>
+</html>

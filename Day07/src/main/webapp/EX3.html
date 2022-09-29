@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<input id="radio_yes" type="radio">있다
+	<br>
+	<input id="radio_no" type="radio">없다
+	<br>
+	<input id="btn_ck" type="button" value="정답 확인" onclick="check()">
+	
+	<script>
+		var radio_yes = document.getElementById("radio_yes");
+		/*
+			document
+			.querySelector("input[type='radio']:checked")
+			.value == "yes"
+			
+			#jquery : javascript를 보다 쉽게 쓰기 위한 라이브러리
+		*/
+		function check() {
+			if( radio_yes.checked ) {
+				alert("정답입니다!");
+			} else {
+				alert("땡!");
+			}
+		}
+	</script>
+</body>
+</html>
