@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<!-- 버튼의 팝업텍스트에 div에 해당하는 텍스트를 가져와 입히는 방법 -->
+	<div id="div1">팝팝팝!</div>
+	
+	<input type="button" value="팝업!" onclick="pop()">
+	
+	<input type="button" value="팝업!" onclick="alert(div.innerText)">
+	<input type="button" value="팝업!" onclick="alert(document.getElementById('div1').innerText)">
+	<!-- 통상적인 방법 -->
+	<input type="button" value="팝업!" onclick="pop1()">
+	<script>
+		function pop() {
+			alert(document.getElementById("div1").innerText);
+		}
+		//통상적인 방법
+		function pop1() {
+			//변수를 먼저 선언해준 뒤 (변수명은 아무거나 해도 되지만 id값과 변수명을 통일하는게 보기 편하다)
+			var div1 = document.getElementById("div1");
+			//alert를 따로 분리를 해서 작성한다. (여기에 나오는 div1은 요소명이 아닌 위에서 선언해준 변수명이다)
+			alert(div1.innerText);
+		}
+	</script>
+</body>
+</html>

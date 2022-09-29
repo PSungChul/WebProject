@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<div id="contents">지금은 데이모드입니다.</div>
+	<br>
+	<input id="btn_mode" type="button" value="다크모드" onclick="mode()">
+	
+	<script>
+		function mode() {
+			var body = document.body;
+			var contents = document.getElementById("contents");
+			var btn_mode = document.getElementById("btn_mode");
+			
+			if( btn_mode.value == "다크모드" ) {
+				body.style.backgroundColor = "black";
+				contents.style.color = "white";
+				contents.innerText = "지금은 다크모드입니다."
+				btn_mode.value = "데이모드";
+			} else {
+				body.style.backgroundColor = "white";
+				contents.style.color = "black";
+				contents.innerText = "지금은 데이모드입니다."
+				btn_mode.value = "다크모드";
+			}
+		}
+	</script>
+</body>
+</html>
