@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<!-- 인라인 스타일 onclick -->
+	<input type="button" value="지금 날짜와 시간은? : 1번째 방법" onclick="alert(Date());">
+	<br><br>
+	<!-- 스크립트 내부 onclick -->
+	<input id="btn2" type="button" value="지금 날짜와 시간은? : 2번째 방법">
+	<br><br>
+	<!-- add~~Listener -->
+	<input id="btn3" type="button" value="지금 날짜와 시간은? : 3번째 방법">
+	
+	<script>
+		// 스크립트 내부 onclick 방식
+		var btn2 = document.getElementById("btn2"); // 변수에 객체 생성
+		// onclick에 함수 직접 선언
+		btn2.onclick = function() {
+			alert(Date());
+		}
+		
+		// add~~Listener 방식
+		var btn3 = document.getElementById("btn3"); // 변수에 객체 생성
+		// addEventListener
+		btn3.addEventListener("click", check()); // 실행하자마자 바로 실행
+		btn3.addEventListener("click", check); // 버튼을 누르면 실행
+		// 함수 선언
+		function check() {
+			alert(Date());
+		}
+	</script>
+</body>
+</html>

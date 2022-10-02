@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<input id="id_input" type="text">
+	<script>
+		var id_input = document.getElementById("id_input"); // 지향하는 방법
+		id_input.value = "가나다"; // 지양하는 방법 : 이렇게 작성해도 작동하는건 문제는 없지만
+								// 				나중에 다른 변수들과 겹치거나 할수도 있기에
+								//				미리 변수를 만들어 작성해 둔다.
+	</script>
+</body>
+</html>
