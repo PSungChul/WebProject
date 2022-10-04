@@ -7,7 +7,7 @@ btn_calc[0].addEventListener("click", function() {
 	const num_1 = parseInt(document.getElementById("num_1").value);
 	const num_2 = parseInt(document.getElementById("num_2").value);
 	result.innerText = (num_1 + num_2);
-})
+});
 // 빼기
 btn_calc[1].addEventListener("click", function() {
 	const num_1 = parseInt(document.getElementById("num_1").value);
