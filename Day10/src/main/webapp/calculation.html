@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Calculation</title>
+</head>
+<body>
+	<input id="num1" type="number">
+	<input id="num2" type="number">
+	<br>
+
+	<input class="btn_calc" type="button" value="+">
+	<input class="btn_calc" type="button" value="-">
+	<input class="btn_calc" type="button" value="*">
+	<input class="btn_calc" type="button" value="/">
+	<br>
+
+	<label> 결과 : </label>
+	<div id="result"></div>
+
+	<script>
+		const num1 = document.getElementById("num1"); // 첫번째 수
+		const num2 = document.getElementById("num2"); // 두번재 수
+
+		const result = document.getElementById("result");
+
+		const btn_calc = document.getElementsByClassName("btn_calc"); // btn을 리스트로 받아옴
+		for (let i = 0; i < btn_calc.length; i++) {
+			btn_calc[i].addEventListener("click", function() {
+				btn_calc[i].style.backgroundColor = "red";
+				calc(i);
+			});
+		}
+
+		function calc(oper) {
+			const n1 = Number(num1.value); // String to Number
+			const n2 = Number(num2.value);
+
+			switch (oper) {
+			case 0: // +
+				result.innerText = n1 + n2;
+				break;
+			case 1: // -
+				result.innerText = n1 - n2;
+				break;
+			case 2: // *
+				result.innerText = n1 * n2;
+				break;
+			case 3: // /
+				if (n2 == 0)
+					result.innerText = "0으로 나눌 수 없습니다.";
+				else
+					result.innerText = n1 / n2;
+				break;
+			}
+		}
+	</script>
+</body>
+</html>
