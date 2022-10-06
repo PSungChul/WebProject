@@ -50,3 +50,44 @@ SELECT 열이름1, 열이름2, …
 FROM 테이블명 --> 전체 행
 WHERE 열이름1="값", 열이름2="값"; --> 조건 // 조건에 만족하는 행
 // 해당 테이블에서 행을 조회할 수 있는 값/병위
+
+// 예제3
+CREATE TABLE Room
+(
+	RoomNum INT,
+	People INT,
+	Season VARCHAR(30)
+);
+
+INSERT INTO Room
+VALUES (101, 2, 'spring');
+INSERT INTO Room
+VALUES (102, 2, 'spring');
+INSERT INTO Room
+VALUES (201, 4, 'summer');
+INSERT INTO Room
+VALUES (202, 4, 'fall');
+INSERT INTO Room
+VALUES (301, 8, 'winter');
+
+SELECT Season
+FROM ROOM
+WHERE RoomNum=102;
+
+SELECT RoomNum
+FROM ROOM
+WHERE Season='fall';
+
+SELECT People
+FROM ROOM
+WHERE Season='winter';
+
+SELECT RoomNum, People
+FROM ROOM
+WHERE Season='spring';
+
+DELETE FROM Room
+WHERE Season='fall';
+
+INSERT INTO Room
+VALUES (302, 8, 'fall');
