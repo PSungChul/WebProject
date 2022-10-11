@@ -29,7 +29,7 @@
 		}
 	}
 		
-	System.out.println(result); // == <%= result
+	out.println(result); // == <%= result
 	%>
 </body>
 </html>
