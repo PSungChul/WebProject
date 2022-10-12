@@ -8,9 +8,10 @@
 </head>
 <body>
 	<%! String name = "sungchul"; %>
-	<%! int n1 = 1; 
-		int n2 = 2; %>
-	<%! int n3 = 3; %>
+	<%! int n1 = 1; %>
+	<%! int n2 = 2; 
+		int n3 = 3; %>
+		
 	<%! public int plus(int a, int b, int c) {
 			return a+b+c;
 		}%>

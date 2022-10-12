@@ -18,7 +18,6 @@
 				}
 			}
 		}%>
-	<%= maxNum() %>
 	<% maxNum(); %>
 	<%= result %>
 	
