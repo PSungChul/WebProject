@@ -1,7 +1,8 @@
-// 학원 : cd C:\Program Files\MySQL\MySQL Server 8.0\bin
-// 집집 : cd C:\Program Files\MySQL\MySQL Server 8.0\bin
+// 맥OS : cd /usr/local/mysql/bin
+// 윈도우 : cd C:\Program Files\MySQL\MySQL Server 8.0\bin
 
-// MySQL 로그인 : mysql -u root -p
+// 맥OS MySQL 로그인 : ./mysql -u root -p
+// 윈도우 MySQL 로그인 : mysql -u root -p
 
 CREATE DATABASE Hotel; // 데이터베이스 생성
 show databases; // 데이터베이스 확인
@@ -98,13 +99,6 @@ WHERE Season='fall';
 
 INSERT INTO Room
 VALUES (302, 8, 'fall');
-
-UPDATE Room
-SET Season='winter';
-
-UPDATE Room
-SET Season='summer'
-WHERE People='2';
 ------------------------------------------
 RENAME TABLE Test TO Reservation; // 테이블 이름 변경
 
@@ -135,7 +129,7 @@ COMMIT; // 수동저장
 
 // 제약 조건 NULL값 예제
 INSERT INTO Customer (id, name, address)
-VALUES (6, '김철수', '부산');
+VALUES (6, '김송아', '부산');
 INSERT INTO Customer (id, name, age)
 VALUES (7, '박은빈', 25);
 INSERT INTO Customer (id)
@@ -144,31 +138,27 @@ VALUES (8);
 // 제약 조건 추가
 CREATE TABLE mbti
 (
-	idx INT UNIQUE NOT NULL,
-	pid INT,
-	name VARCHAR(30) NOT NULL,
+	idx INT UNIQUE,
+	pid INT NOT NULL,
+	name VARCHAR(30),
 	result VARCHAR(30)
 );
 
 INSERT INTO mbti
-VALUES (1, 111111, '김철수', 'INFP');
+VALUES (1, 000101, '김철수', 'INFP');
 // idx값이 중복일 경우
 INSERT INTO mbti (idx, pid, name, result)
-VALUES (1, 222222, '김영희', 'ESTJ');
-// name열에 데이터값이 없을 경우
-INSERT INTO mbti (idx, pid, result)
-VALUES (2, 222222, 'ESTJ');
+VALUES (1, 111111, '김영희', 'ESTJ');
+// pid열에 데이터값이 없을 경우
+INSERT INTO mbti (idx, name, result)
+VALUES (2, '김영희', 'ESTJ');
 // ALTER 사용법
 // 새로운 컬럼을 생성하면서 제약조건을 같이 걸때 사용
 ALTER TABLE mbti
 ADD pid INT UNIQUE NOT NULL; -- 새로운 컬럼 생성 + (제약조건)
-ALTER TABLE mbti
-ADD age INT NOT NULL;
 // 이미 걸려있는곳을 수정할때 사용
 ALTER TABLE mbti
 MODIFY COLUMN idx INT PRIMARY KEY;
-ALTER TABLE mbti
-MODIFY COLUMN pid INT NOT NULL UNIQUE;
 // 미션 : 특정 컬럼 제약 조건 삭제
 ALTER TABLE mbti
 DROP NOT NULL;

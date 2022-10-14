@@ -27,8 +27,9 @@
 			result = arr[i];
 		}
 	}
-		
+	
 	out.println(result); // == <%= result
+	out.println("<h2>" + result + "<h2>"); // ""큰따옴표 내부는 html세상이므로 태그도 입힐 수 있다.
 	%>
 </body>
 </html>
