@@ -1,7 +1,7 @@
 // 맥OS : cd /usr/local/mysql/bin
 // 윈도우 : cd C:\Program Files\MySQL\MySQL Server 8.0\bin
 
-// 맥OS MySQL 로그인 : ./mysql -u root -p 46281379
+// 맥OS MySQL 로그인 : ./mysql -u root -p46281379
 // 윈도우 MySQL 로그인 : mysql -u root -p
 
 CREATE DATABASE Hotel; // 데이터베이스 생성
