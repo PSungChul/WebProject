@@ -1,7 +1,7 @@
 // 맥OS : cd /usr/local/mysql/bin
 // 윈도우 : cd C:\Program Files\MySQL\MySQL Server 8.0\bin
 
-// 맥OS MySQL 로그인 : ./mysql -u root -p
+// 맥OS MySQL 로그인 : ./mysql -u root -p 46281379
 // 윈도우 MySQL 로그인 : mysql -u root -p
 
 CREATE DATABASE Hotel; // 데이터베이스 생성
@@ -162,4 +162,16 @@ MODIFY COLUMN idx INT PRIMARY KEY;
 // 미션 : 특정 컬럼 제약 조건 삭제
 ALTER TABLE mbti
 DROP NOT NULL;
+
+----------------------------------------------------------------
+
+CREATE DATABASE test;
+
+USE test;
+
+CREATE TABLE testTable
+(
+	id INT,
+	name VARCHAR(30)
+);
 
