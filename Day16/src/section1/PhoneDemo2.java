@@ -5,7 +5,6 @@ abstract class Phone {
 }
 
 class SamsongPhone extends Phone {
-	
 	@Override
 	void turnOn() {
 		System.out.println("삼성폰이 켜졌습니다.");
@@ -13,8 +12,6 @@ class SamsongPhone extends Phone {
 }
 
 class LZPhone extends Phone {
-	
-	@Override
 	void turnOn() {
 		System.out.println("엘지폰이 켜졌습니다.");
 	}
