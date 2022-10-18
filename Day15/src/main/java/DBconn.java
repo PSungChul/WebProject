@@ -11,7 +11,8 @@ import java.sql.Statement;
  * 
  */
 public class DBconn { // DB 연결 전용 클래스
-	private Connection conn; // 자바와 DB를 연결해줄 통로 // 아무나 접근을 못하게 private로 만들어 주는게 좋다.
+	// 아무나 접근을 못하게 private로 만들어 주는게 좋다.
+	private Connection conn; // 자바와 DB를 연결해줄 통로
 	private Statement stmt; // sql을 감싸주는 캡슐 - 기본
 	private PreparedStatement pstmt; // sql을 감싸주는 캡슐 - 준비된
 	private ResultSet rs; // 값을 받는 용도
@@ -25,7 +26,7 @@ public class DBconn { // DB 연결 전용 클래스
 			
 			conn = DriverManager
 					.getConnection(url, "root", "46281379"); // 연결 시작
-			System.out.println("DB 접속 성공");
+			System.out.println("DB 접속 성공"); // 확인용 메세지
 			
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
@@ -85,7 +86,7 @@ public class DBconn { // DB 연결 전용 클래스
 	
 	public static void main(String[] args) {
 		DBconn db = new DBconn();
-		db.findAll(0, "");
+		db.findAll(1, "tester1");
 		db.disconnect();
 	} // main
 } // DBconn
