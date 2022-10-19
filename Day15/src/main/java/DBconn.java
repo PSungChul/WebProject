@@ -19,13 +19,13 @@ public class DBconn { // DB 연결 전용 클래스
 	
 	String url = "jdbc:mysql://localhost:3306/test"; // mysql "test" DB 주소
 	// DB 통로 생성 및 연결
-	DBconn() {
+	public DBconn() {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver"); // mysql-DBconnector 라이브러리의 Driver 클래스 파일 이름
 			System.out.println("Driver 로딩 성공"); // 확인용 메세지
 			
 			conn = DriverManager
-					.getConnection(url, "root", ""); // 연결 시작
+					.getConnection(url, "root", "46281379"); // 연결 시작
 			System.out.println("DB 접속 성공"); // 확인용 메세지
 			
 		} catch (ClassNotFoundException e) {
@@ -34,26 +34,6 @@ public class DBconn { // DB 연결 전용 클래스
 			e.printStackTrace();
 		}
 	} // DBconn() DB연결
-	
-	/**
-	 * testTable 테이블 전체 조회
-	 */
-	public void findAll(int id, String name) {
-		try {
-			stmt = conn.createStatement();
-			rs = stmt.executeQuery("SELECT * FROM testTable");
-			
-			while(rs.next()) { // 다음 행 있어?
-				System.out.println(rs.getInt("id") + " " + rs.getString("name"));
-			}
-			
-			rs.close();
-			stmt.close();
-			
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-	} // findAll(id, name) SELECT
 	
 	/**
 	 * testTable 테이블 데이터 입력
@@ -75,6 +55,26 @@ public class DBconn { // DB 연결 전용 클래스
 			e.printStackTrace();
 		}
 	} // save(id, name) INSERT
+	
+	/**
+	 * testTable 테이블 전체 조회
+	 */
+	public void findAll(int id, String name) {
+		try {
+			stmt = conn.createStatement();
+			rs = stmt.executeQuery("SELECT * FROM testTable");
+			
+			while(rs.next()) { // 다음 행 있어?
+				System.out.println(rs.getInt("id") + " " + rs.getString("name"));
+			}
+			
+			rs.close();
+			stmt.close();
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	} // findAll(id, name) SELECT
 	
 	public void disconnect() { // conn은 모두가 동등하게 사용하기에 나중에 모두 다 사용했을때 main에서 호출해서 종료시켜준다.
 		try {
