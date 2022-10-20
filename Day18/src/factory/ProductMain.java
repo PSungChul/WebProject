@@ -15,6 +15,8 @@ public class ProductMain {
 		pc.creat(phone);
 		pc.creat(notebook);
 		pc.findAll();
-		pc.findById(4);
+		pc.findById(1);
+		pc.findById(3);
+		pc.findById(5);
 	}
 }

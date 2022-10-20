@@ -24,7 +24,7 @@ public class ProductController {
 					+ res.get(i).getProuductDesc());
 		}
 	}
-	// ID데이터만 조회(출력)
+	// 지정 ID데이터만 조회(출력)
 	void findById(int n) {
 		List<Product> resId = productRepository.findById();
 		
