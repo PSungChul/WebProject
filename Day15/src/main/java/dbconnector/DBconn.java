@@ -26,7 +26,7 @@ public class DBconn { // DB 연결 전용 클래스
 			System.out.println("Driver 로딩 성공"); // 확인용 메세지
 			
 			conn = DriverManager
-					.getConnection(url, "root", "46281379"); // 연결 시작
+					.getConnection(url, "root", ""); // 연결 시작
 			System.out.println("DB 접속 성공"); // 확인용 메세지
 			
 		} catch (ClassNotFoundException e) {
