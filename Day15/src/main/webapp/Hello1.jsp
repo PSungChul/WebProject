@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ page import="dbconnector.DBconn" %>
+<%@ page import="java.util.List" %>
+<%@ page import="java.util.ArrayList" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,7 +12,8 @@
 <body>
 	<%
 		DBconn dbconn = new DBconn();
-		dbconn.findAll(1, "tester1");
+		List<Integer> list = new ArrayList<Integer>();
+		out.println(dbconn.findAll(1, "tester"));
 	%>
 </body>
 </html>
