@@ -9,7 +9,7 @@ public class MemberService {
     @Autowired // 새로운 DI 구현 방식
     MemberRepository memberRepository;
 
-    void save(Member member) {
-        memberRepository.save(member);
+    Member save(Member member) {
+        return memberRepository.save(member);
     }
 }

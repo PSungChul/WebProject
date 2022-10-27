@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"> <!-- th라는 변수에 thymeleaf를 넣어서 가져온다. -->
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    안녕하세요!
+<!--    <p th:text="${member.getName()}">반갑습니다.</p> &lt;!&ndash; member의 이름값만 가져오기 &ndash;&gt;-->
+    <p><span th:text="${name}"></span>님 (ID : <span th:text="${id}"></span>) 회원 가입 되셨습니다. 환영합니다.</p>
+</body>
+</html>

@@ -14,7 +14,7 @@ public class Member {
         return mID;
     }
 
-    String getName() {
+    public String getName() {
         return name;
     }
 }
