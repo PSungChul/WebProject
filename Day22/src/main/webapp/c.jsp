@@ -1,8 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ page import="dbconnector.DBconn" %>
-<%@ page import="java.util.List" %>
-<%@ page import="java.util.ArrayList" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,9 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<%
-		DBconn dbconn = new DBconn();
-		List<Integer> list = new ArrayList<Integer>();
-	%>
+런닝맨
 </body>
 </html>

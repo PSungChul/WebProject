@@ -1,8 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ page import="dbconnector.DBconn" %>
-<%@ page import="java.util.List" %>
-<%@ page import="java.util.ArrayList" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,8 +8,8 @@
 </head>
 <body>
 	<%
-		DBconn dbconn = new DBconn();
-		List<Integer> list = new ArrayList<Integer>();
+		out.println("<script> alert('hi, this is from.jsp') </script>");
 	%>
+	<jsp:forward page="to.jsp"></jsp:forward>
 </body>
 </html>
