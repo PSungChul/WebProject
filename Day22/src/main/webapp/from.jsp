@@ -7,6 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+	from.jsp입니다.
 	<%
 		out.println("<script> alert('hi, this is from.jsp') </script>");
 	%>

@@ -8,8 +8,8 @@
 </head>
 <body>
 	<%
-		String program = request.getParameter("program");
-		String nextPage = null;
+		String program = request.getParameter("program"); // name값 가져오기
+		String nextPage = null; // 페이지값 설정
 		
 		if ( program.equals("A") ) {
 			nextPage = "a.jsp";
