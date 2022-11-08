@@ -12,7 +12,7 @@
 <body>
 	<%
 		DBconn dbconn = new DBconn();
-		List<Integer> list = new ArrayList<Integer>();
+		dbconn.findAll(1, "tt");
 	%>
 </body>
 </html>
